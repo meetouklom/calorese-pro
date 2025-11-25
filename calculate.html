@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculate</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="tab">
+    <div class="logo">
+      <img src="./img/logo.png" alt="" />
+    </div>
+    <div class="manu">
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculate.html">Calculate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="calc-container">
+    <h2>BMR & TDEE Calculator</h2>
+
+    <div class="calc-gender-btns">
+      <button id="maleBtn" onclick="selectGender('male')">Male</button>
+      <button id="femaleBtn" onclick="selectGender('female')">Female</button>
+    </div>
+
+    <input type="number" id="weight" placeholder="Weight (kg)" />
+    <input type="number" id="height" placeholder="Height (cm)" />
+    <input type="number" id="age" placeholder="Age" />
+
+    <select id="activityLevel">
+      <option value="">-- Select Activity Level --</option>
+      <option value="1.2">Sedentary (นั่งทำงานทั้งวัน)</option>
+      <option value="1.375">Lightly active (ออกกำลังกายน้อย)</option>
+      <option value="1.55">Moderately active (ออกกำลังกายปานกลาง)</option>
+      <option value="1.725">Very active (ออกกำลังกายหนัก)</option>
+      <option value="1.9">Extra active (ใช้แรงงานหนัก)</option>
+    </select>
+
+    <button class="calc-button" onclick="calculateBMR()">Calculate</button>
+
+    <div class="calc-result" id="bmrResult">BMR (kcal): 0</div>
+    <div class="calc-result" id="tdeeResult">TDEE (kcal): 0</div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
